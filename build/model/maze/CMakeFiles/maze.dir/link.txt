@@ -1,2 +1,0 @@
-/usr/bin/ar qc libmaze.a CMakeFiles/maze.dir/maze_autogen/mocs_compilation.cpp.o CMakeFiles/maze.dir/maze.cpp.o
-/usr/bin/ranlib libmaze.a

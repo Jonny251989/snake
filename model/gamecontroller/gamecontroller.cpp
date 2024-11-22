@@ -1,10 +1,5 @@
 #include "gamecontroller.h"
 
-#include <algorithm>
-#include <random>
-#include "snake.h"
-#include <QTime>
-
 SnakeGameController::SnakeGameController(QObject *parent,  std::string type, int speedOfSnake_): QObject(parent), typeOfMaze(type), speed(speedOfSnake_){
     speed = speedOfSnake_;
     next_direction_snake = Direction::RIGHT;
@@ -15,7 +10,6 @@ SnakeGameController::SnakeGameController(QObject *parent,  std::string type, int
     maze = new Mazes(parent, typeOfMaze);
 
     this->AppearanceOfSnakeDependingOnTypeOfMaze(typeOfMaze);
-
 }
 
 void SnakeGameController::stop() {
@@ -23,13 +17,10 @@ void SnakeGameController::stop() {
 }
 
 void SnakeGameController::step() {
-
     snake->oneStep(next_direction_snake);
     this->collisionWithEats();
-
-    if(isDeadAfterMove() && immortality_mode == false){
+    if(isDeadAfterMove() && immortality_mode == false)
         this->stop();
-    }
     emit updated();
 }
 

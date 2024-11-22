@@ -1,2 +1,0 @@
-/usr/bin/ar qc libstartwidget.a CMakeFiles/startwidget.dir/startwidget_autogen/mocs_compilation.cpp.o CMakeFiles/startwidget.dir/startwidget.cpp.o
-/usr/bin/ranlib libstartwidget.a

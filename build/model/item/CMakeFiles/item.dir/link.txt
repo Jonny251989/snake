@@ -1,2 +1,0 @@
-/usr/bin/ar qc libitem.a CMakeFiles/item.dir/item_autogen/mocs_compilation.cpp.o CMakeFiles/item.dir/item.cpp.o
-/usr/bin/ranlib libitem.a

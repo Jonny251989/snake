@@ -24,6 +24,7 @@
 #include <QKeyEvent>
 #include <experimental/random>
 
+#include "snake.h"
 #include "item.h"
 #include "food.h"
 #include "maze.h"

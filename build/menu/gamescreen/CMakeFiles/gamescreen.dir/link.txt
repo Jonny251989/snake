@@ -1,2 +1,0 @@
-/usr/bin/ar qc libgamescreen.a CMakeFiles/gamescreen.dir/gamescreen_autogen/mocs_compilation.cpp.o CMakeFiles/gamescreen.dir/gamescreen.cpp.o
-/usr/bin/ranlib libgamescreen.a

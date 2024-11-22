@@ -1,2 +1,0 @@
-/usr/bin/ar qc libscoremodel.a CMakeFiles/scoremodel.dir/scoremodel_autogen/mocs_compilation.cpp.o CMakeFiles/scoremodel.dir/scoremodel.cpp.o
-/usr/bin/ranlib libscoremodel.a

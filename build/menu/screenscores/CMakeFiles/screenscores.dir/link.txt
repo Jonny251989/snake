@@ -1,2 +1,0 @@
-/usr/bin/ar qc libscreenscores.a CMakeFiles/screenscores.dir/screenscores_autogen/mocs_compilation.cpp.o CMakeFiles/screenscores.dir/screenscores.cpp.o
-/usr/bin/ranlib libscreenscores.a
