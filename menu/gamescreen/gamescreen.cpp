@@ -1,8 +1,4 @@
 #include "gamescreen.h"
-#include <QGridLayout>
-
-#include "gamecontroller.h"
-
 
 GameScreen::GameScreen(QWidget *parent): QWidget(parent) {
     this->setFocus();

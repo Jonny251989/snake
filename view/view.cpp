@@ -3,8 +3,7 @@
 #include "gamecontroller.h"
 #include "snake.h"
 
-View::View(SnakeGameController* game, QWidget *parent): QGraphicsView(parent), m_game(game)
-{
+View::View(SnakeGameController* game, QWidget *parent): QGraphicsView(parent), m_game(game){
     setFocusPolicy(Qt::NoFocus);
     this->setFixedHeight(550);
     this->setFixedWidth(550);
@@ -57,9 +56,7 @@ void View::blinkSnake(){
     std::swap(blinkColorTail, flashingColorTail);
 }
 
-
 void View::reload_all_objects() {
-
     QColor m_color = QColor(Qt::darkBlue);
     QPen pen_free_item(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
     for(int rows = 0; rows < 10; ++rows){
@@ -176,7 +173,6 @@ void View::gameOver(){
         tr("Game Over!"));
 }
 
-View::~View()
-{
+View::~View(){
 
 }
