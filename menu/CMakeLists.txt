@@ -1,0 +1,6 @@
+add_subdirectory(gamescreen)
+add_subdirectory(gamestartoptionswidget)
+add_subdirectory(inputname)
+add_subdirectory(screencontroller)
+add_subdirectory(screenscores)
+add_subdirectory(startwidget)

@@ -1,0 +1,7 @@
+add_subdirectory(elixir)
+add_subdirectory(food)
+add_subdirectory(gamecontroller)
+add_subdirectory(item)
+add_subdirectory(maze)
+add_subdirectory(scoremodel)
+add_subdirectory(snake)

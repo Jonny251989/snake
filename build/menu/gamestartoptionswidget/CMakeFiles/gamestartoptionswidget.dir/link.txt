@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgamestartoptionswidget.a CMakeFiles/gamestartoptionswidget.dir/gamestartoptionswidget_autogen/mocs_compilation.cpp.o CMakeFiles/gamestartoptionswidget.dir/gamestartoptionswidget.cpp.o
+/usr/bin/ranlib libgamestartoptionswidget.a

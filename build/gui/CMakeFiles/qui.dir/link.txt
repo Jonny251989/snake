@@ -1,0 +1,2 @@
+/usr/bin/ar qc libqui.a CMakeFiles/qui.dir/qui_autogen/mocs_compilation.cpp.o
+/usr/bin/ranlib libqui.a

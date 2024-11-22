@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinputname.a CMakeFiles/inputname.dir/inputname_autogen/mocs_compilation.cpp.o CMakeFiles/inputname.dir/inputname.cpp.o
+/usr/bin/ranlib libinputname.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsnake.a CMakeFiles/snake.dir/snake_autogen/mocs_compilation.cpp.o CMakeFiles/snake.dir/snake.cpp.o
+/usr/bin/ranlib libsnake.a

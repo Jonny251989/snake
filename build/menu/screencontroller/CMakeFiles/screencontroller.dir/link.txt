@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscreencontroller.a CMakeFiles/screencontroller.dir/screencontroller_autogen/mocs_compilation.cpp.o CMakeFiles/screencontroller.dir/screencontroller.cpp.o
+/usr/bin/ranlib libscreencontroller.a

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libelixir.a CMakeFiles/elixir.dir/elixir_autogen/mocs_compilation.cpp.o CMakeFiles/elixir.dir/elixir.cpp.o
+/usr/bin/ranlib libelixir.a

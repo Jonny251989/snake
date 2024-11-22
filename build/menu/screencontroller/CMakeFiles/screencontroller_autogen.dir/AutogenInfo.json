@@ -1,0 +1,94 @@
+{
+	"BUILD_DIR" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/screencontroller_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ivan/vs_code/m_snake/snake/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ivan/vs_code/m_snake/snake/menu/screencontroller",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/ivan/vs_code/m_snake/snake/menu/screencontroller/CMakeLists.txt"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/ivan/vs_code/m_snake/snake",
+	"DEP_FILE" : "",
+	"DEP_FILE_RULE_NAME" : "",
+	"HEADERS" : 
+	[
+		[
+			"/home/ivan/vs_code/m_snake/snake/menu/screencontroller/screencontroller.h",
+			"Mu",
+			"EWIEGA46WW/moc_screencontroller.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/screencontroller_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/screencontroller_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/ivan/vs_code/m_snake/snake/menu/screencontroller",
+		"/home/ivan/vs_code/m_snake/snake/menu/screenscores",
+		"/home/ivan/vs_code/m_snake/snake/model/item",
+		"/home/ivan/vs_code/m_snake/snake/model/scoremodel",
+		"/home/ivan/vs_code/m_snake/snake/model/maze",
+		"/home/ivan/vs_code/m_snake/snake/menu/startwidget",
+		"/home/ivan/vs_code/m_snake/snake/menu/inputname",
+		"/home/ivan/vs_code/m_snake/snake/view",
+		"/home/ivan/vs_code/m_snake/snake/model/snake",
+		"/home/ivan/vs_code/m_snake/snake/model/elixir",
+		"/home/ivan/vs_code/m_snake/snake/model/gamecontroller",
+		"/home/ivan/vs_code/m_snake/snake/model/food",
+		"/home/ivan/vs_code/m_snake/snake/menu/gamestartoptionswidget",
+		"/home/ivan/vs_code/m_snake/snake/menu/gamescreen",
+		"/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt6",
+		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
+		"/usr/include",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/screencontroller_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/CMakeFiles/screencontroller_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 2,
+	"SETTINGS_FILE" : "/home/ivan/vs_code/m_snake/snake/build/menu/screencontroller/CMakeFiles/screencontroller_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/ivan/vs_code/m_snake/snake/menu/screencontroller/screencontroller.cpp",
+			"Mu",
+			null
+		]
+	],
+	"VERBOSITY" : 0
+}
