@@ -1,8 +1,6 @@
-#ifndef FOOD_H
-#define FOOD_H
+#pragma once
 
 #include <QObject>
-
 #include "item.h"
 
 class Food : public QObject, public Item {
@@ -11,5 +9,3 @@ public:
     explicit Food(const Item& position, QObject *parent = nullptr);
 };
 
-
-#endif // FOOD_H

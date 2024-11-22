@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.15)
 
-project (mysnake CXX)
+project (msnake CXX)
 
-set(target mysnake)
+set(target msnake)
 
 set(CMAKE_AUTOMOC ON) # Автоматически запускает moc
 set(CMAKE_AUTORCC ON) # Для ресурсов Qt
