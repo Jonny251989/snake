@@ -3,9 +3,7 @@
 #include <QFile>
 #include <iterator>
 
-ScoreModel::ScoreModel() {
-
-}
+ScoreModel::ScoreModel() { }
 
 void ScoreModel::insertion_result(std::string name_, int score_, std::string type_, int speed_){
     std::vector<ScoreModel::PlayerResult> player_scores = get_scores();
@@ -28,9 +26,7 @@ int ScoreModel::insertion_position(int score){
     return std::distance(player_scores.begin(), position );
 }
 
-
 std::vector<ScoreModel::PlayerResult> ScoreModel::get_scores(){
-
     std::ifstream ifst(m_filename);
     std::vector<ScoreModel::PlayerResult> player_scores;
 
@@ -47,7 +43,6 @@ std::vector<ScoreModel::PlayerResult> ScoreModel::get_scores(){
 
         ifst >> std::ws;
         ifst >> score.speed;
-
         if (ifst.fail())
             break;
 
@@ -63,13 +58,3 @@ void ScoreModel::update_scores(std::vector<ScoreModel::PlayerResult> scores){
     for (auto &score : scores)
         ofst << score.name <<"\n"<<score.score<<"\n"<<score.type<<"\n"<< score.speed<<"\n";
 }
-
-
-
-
-
-
-
-
-
-

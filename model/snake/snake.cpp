@@ -1,7 +1,6 @@
 #include "snake.h"
 
 Snake::Snake(size_t length) : length_(length) {
-    length = 3;
     current_direction = Direction::RIGHT;
 }
 

@@ -1,5 +1,4 @@
-#ifndef SCOREMODEL_H
-#define SCOREMODEL_H
+#pragma once
 
 #include <QObject>
 #include <string>
@@ -29,7 +28,6 @@ public:
             speed = speed_;
         }
     };
-
     ScoreModel();
 
     static std::vector<PlayerResult> get_scores();
@@ -37,10 +35,4 @@ public:
     static void insertion_result(std::string, int, std::string, int);
     static QString nameToMozesType(int arg);
     static void update_scores(std::vector<PlayerResult> scores);
-
-
-private:
-
 };
-
-#endif // SCOREMODEL_H
