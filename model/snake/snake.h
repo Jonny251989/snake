@@ -11,14 +11,14 @@
 
 class Snake {
 private:
-    int length;
+    size_t length_;
     std::list<Item> segments;
     Direction next_direction;
     Direction current_direction;
     int score;
 
 public:
-    Snake(int length = 3);
+    Snake(size_t length_ = 3);
     void checkBorder();
     bool intersect( Item &item );
     void oneStep(Direction direction);

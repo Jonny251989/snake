@@ -1,6 +1,6 @@
 #include "snake.h"
 
-Snake::Snake(int length_) : length(length_) {
+Snake::Snake(size_t length) : length_(length) {
     length = 3;
     current_direction = Direction::RIGHT;
 }
@@ -10,29 +10,20 @@ void Snake::setStartPosition(int x, int y){
 }
 
 void Snake::checkBorder(){ //изменение координат
-
     std::list<Item>::iterator i;
-
     for(i = segments.begin();  i != segments.end(); i++){
-
-        if ( i->x > 9){
+        if ( i->x > 9)
             i->x = 0;
-        }
-        else if ( i->x < 0){
-            i->x = 9;
-        }
-        else if ( i->y > 9){
-            i->y = 0;
-        }
-        else if ( i->y < 0){
-            i->y = 9;
-        }
+        else if ( i->x < 0)
+            i->x = 9;  
+        else if ( i->y > 9)
+            i->y = 0;   
+        else if ( i->y < 0)
+            i->y = 9;     
     }
 }
 
 void Snake::correctDirection(Direction next_direction_){
-
-
     switch ( next_direction_ ) {
     case Direction::LEFT:
         if ( current_direction == Direction::RIGHT ) {
@@ -54,24 +45,19 @@ void Snake::correctDirection(Direction next_direction_){
     current_direction = next_direction_;
 
 }
-
 void Snake::lengthUp(){
-    this->length = length + 1;
+    length_ = length_ + 1;
 }
-
 
 void Snake::oneStep( Direction direction ) {
 
     this->correctDirection(direction);
 
-    if ( segments.size() == this->length ) {
+    if ( segments.size() == length_ ) 
         segments.pop_back();
-    }
-
-
+    
     Item second = segments.front();
     Item head = second;
-
 
     switch ( current_direction ) {
     case Direction::LEFT:
@@ -92,11 +78,8 @@ void Snake::oneStep( Direction direction ) {
         break;
     }
     segments.push_front(head);
-
     checkBorder(); // проверка координат на выход за пределы поля с последующим изменением координат
-
 }
-
 
 std::list<Item> Snake::getSnake(){
     return segments;
