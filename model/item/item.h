@@ -1,5 +1,4 @@
-#ifndef ITEM_H
-#define ITEM_H
+#pragma once 
 
 extern const int SIZE_FIELD;
 extern const int width;
@@ -24,19 +23,9 @@ enum class Direction {
     DOWN
 };
 
-enum class TypeItem {
-    Empty = '.', Snake = 'x', Wall = '*', Eat = 'o'
-};
-
 struct Item{
-
-    int x;
-    int y;
-
+    int x, y;
     Item(int x_ = 0, int y_ = 0);
     bool operator==(const Item& first);
     ~Item();
-
 };
-
-#endif // ITEM_H

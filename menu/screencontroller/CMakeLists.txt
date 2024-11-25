@@ -1,7 +1,7 @@
 set(target screencontroller)
 
-set(CMAKE_AUTOMOC ON)  # Автоматически запускает moc
-set(CMAKE_AUTOUIC ON)   # Автоматически запускает uic для .ui файлов
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
 
 add_library(${target} STATIC screencontroller.cpp)
 

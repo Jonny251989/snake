@@ -1,8 +1,4 @@
 #include "maze.h"
-#include <QCoreApplication>
-#include <fstream>
-#include <regex>
-
 
 Mazes::Mazes(QObject *parent, std::string type_): QObject(parent), type(type_){
     if(type != "Без лабиринта")

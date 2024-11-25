@@ -33,6 +33,5 @@ public:
     static std::vector<PlayerResult> get_scores();
     static int insertion_position(int score);
     static void insertion_result(std::string, int, std::string, int);
-    static QString nameToMozesType(int arg);
     static void update_scores(std::vector<PlayerResult> scores);
 };

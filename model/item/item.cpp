@@ -10,7 +10,6 @@ const int TOP = 10;
 
 Item::Item(int x_, int y_): x(x_), y(y_){
 
-
 }
 
 bool Item::operator==(const Item& newItem){

@@ -1,6 +1,6 @@
 set(target gamestartoptionswidget)
 
-set(CMAKE_AUTOMOC ON) # Автоматически запускает moc
+set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 
 add_library(${target} STATIC gamestartoptionswidget.cpp)

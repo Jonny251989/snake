@@ -1,15 +1,10 @@
 #pragma once
 
 #include <QObject>
-#include <QPainter>
 #include <iostream>
 #include <fstream>
-#include <QGraphicsTextItem>
-#include <QString>
-#include <QTimer>
 #include <list>
 #include <string>
-#include <map>
 #include "item.h"
 
 class Mazes: public QObject {
