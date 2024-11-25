@@ -24,9 +24,9 @@
 
 class View;
 class Snake;
+
 class SnakeGameController : public QObject {
     Q_OBJECT
-
 private:
     Snake* snake;
     Mazes* maze;
