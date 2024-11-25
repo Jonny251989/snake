@@ -7,7 +7,6 @@
 #include "elixir.h"
 #include "gamecontroller.h"
 #include "scoremodel.h"
-//#include "highscore.h"
 #include "inputname.h"
 #include "startwidget.h"
 #include "gamestartoptionswidget.h"

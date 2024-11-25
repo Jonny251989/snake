@@ -1,7 +1,6 @@
 #include "startwidget.h"
 #include "ui_startwidget.h"
 
-
 StartWidget::StartWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::StartWidget)

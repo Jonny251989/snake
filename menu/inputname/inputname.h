@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <QDebug>
 #include "view.h"
-
 #include "item.h"
 #include "elixir.h"
 #include "gamecontroller.h"

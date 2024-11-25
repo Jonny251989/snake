@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.15)
 
-project (msnake CXX)
+project (snake CXX)
 
 set(target msnake)
 
@@ -15,7 +15,6 @@ find_package(Qt6 REQUIRED COMPONENTS Core Widgets )
 add_subdirectory(menu)
 add_subdirectory(model)
 add_subdirectory(view)
-add_subdirectory(gui)
 
 add_executable(${target} main.cpp)
     

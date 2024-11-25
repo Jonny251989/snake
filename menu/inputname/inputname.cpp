@@ -1,7 +1,5 @@
 #include "inputname.h"
 #include "ui_inputname.h"
-#include "item.h"
-
 InputName::InputName(QWidget *parent): QWidget(parent), ui(new Ui::InputName)
 {
     ui->setupUi(this);
