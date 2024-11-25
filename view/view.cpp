@@ -1,7 +1,5 @@
 #include "view.h"
 #include "ui_view.h"
-#include "gamecontroller.h"
-#include "snake.h"
 
 View::View(SnakeGameController* game, QWidget *parent): QGraphicsView(parent), m_game(game){
     setFocusPolicy(Qt::NoFocus);
@@ -13,17 +11,15 @@ View::View(SnakeGameController* game, QWidget *parent): QGraphicsView(parent), m
     this->setMinimumSize(width_, heigth_);
 
     scene = new QGraphicsScene(this);
-
-    this->reload_all_objects();
-    this->preparation_for_flashing();
-
     this->setScene(scene);
     scene->setSceneRect(0,0, 500, 500); // Устанавливаем область графической сцены
-
     this->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff); // Отключим скроллбар по горизонтали
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);   // Отключим скроллбар по вертикали
     this->setAlignment(Qt::AlignCenter);                        // Делаем привязку содержимого к центру
     this->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);    // Растягиваем содержимое по виджету
+        
+    this->reload_all_objects();
+    this->preparation_for_flashing();
 
     connect(m_game, &SnakeGameController::updated, this, &View::updateFoodAndSnake);
     connect(m_game, &SnakeGameController::signalForBlinkingSnake, this, &View::blink);
@@ -82,8 +78,6 @@ void View::reload_all_objects() {
         }
     }
     updateFoodAndSnake();
-
-    fitInView(0, 0, SIZE_FIELD * w_rect, SIZE_FIELD * h_rect, Qt::KeepAspectRatio); //TODO: move
 }
 
 void View::updateFoodAndSnake() {
@@ -138,7 +132,6 @@ void View::drawSnake(QColor snake_head_effect_color, QColor snake_tail_effect_co
                 }
             }else
               snakeItem->setBrush(QBrush(blinkColorTail));
-
             count++;
         }else
            snakeItem->setBrush(QBrush(blinkColorTail));

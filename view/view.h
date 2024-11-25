@@ -8,9 +8,6 @@
 #include <QGraphicsScene>
 #include <QPainter>
 #include <iostream>
-#include <QGraphicsLayout>
-#include <QKeyEvent>
-#include <QString>
 #include <QLCDNumber>
 #include <QMessageBox>
 #include <QTimer>
@@ -48,5 +45,4 @@ private:
     QColor flashingColorTail;
     QColor blinkColorHead;
     QColor blinkColorTail;
-
 };
