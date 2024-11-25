@@ -1,5 +1,6 @@
 #pragma once 
 
+#include <iostream>
 extern const int SIZE_FIELD;
 extern const int width;
 extern const int height;
@@ -24,8 +25,8 @@ enum class Direction {
 };
 
 struct Item{
-    int x, y;
-    Item(int x_ = 0, int y_ = 0);
+    size_t x, y;
+    Item(size_t x_ = 0, size_t y_ = 0);
     bool operator==(const Item& first);
     ~Item();
 };

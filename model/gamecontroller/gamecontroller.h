@@ -3,13 +3,10 @@
 #include <QObject>
 #include <random>
 #include <QGraphicsItem>
-#include <QGraphicsView>
-#include <QGraphicsScene>
 #include <iostream>
 #include <QString>
 #include <QKeyEvent>
 #include <QTimer>
-#include <QTime>
 #include <QObject>
 #include <iterator>
 #include <list>
@@ -34,23 +31,15 @@ private:
     std::list<Elixir*> elixir;
     Direction next_direction_snake;
     EatType typeOfEat;
-
     std::string typeOfMaze;
-    const int speed_key = 1;
-    int mSecondsToEnd;
-    int score, speed;
-    QTime countdowntime;
-
+    size_t mSecondsToEnd, score, speed;
     bool immortality_mode = false;
     bool mode_eat = false;
-    std::size_t blink_count = 0;
+    size_t blink_count = 0;
     bool is_food_eats = false;
     bool is_game_finished = false;
-
 public:
-    SnakeGameController(QObject *parent = nullptr,  std::string  = "Без Лабиринта", int speedOfSnake_ = 150);
-    ~SnakeGameController();
-
+    SnakeGameController(QObject *parent = nullptr,  std::string  = "Без Лабиринта", size_t speedOfSnake_ = 150);
     Snake* getSnake();
     std::list<Food* > getFood();
     std::list<Elixir* > getElixir();
@@ -62,15 +51,16 @@ public:
     void blink_count_NULL();
     void stop();
     bool isDeadAfterMove();
-    void AppearanceOfSnakeDependingOnTypeOfMaze(std::string type);
-    void setterOfSpeed(int speed_);
-    void generate_eats(EatType typeOfEat);
+    void AppearanceOfSnakeDependingOnTypeOfMaze(const std::string& type);
+    void setterOfSpeed(size_t speed_);
+    void generate_eats(const EatType& typeOfEat);
     void activated_immortality_mode();
-    bool checkingCordsForMatchWithSnakeAndMoze(int x,int y, EatType typeOfEat);
+    bool checkingCordsForMatchWithSnakeAndMoze(size_t x, size_t y, const EatType& typeOfEat);
     bool collisionWithItselfOrMaze();
     void collisionWithEats();
-    void collisionWithFood(const Item head);
-    void collisionWithElixir(const Item head);
+    void collisionWithFood(const Item& head);
+    void collisionWithElixir(const Item& head);
+    ~SnakeGameController();
 public slots:
     void keyPress(QKeyEvent* event);
     void step();
@@ -83,9 +73,8 @@ signals:
     void singnalForRemoveElixirFromScene(Elixir*elixir);
     void signalForBlinkingSnake();
     void signalForStopBlinkingSnake();
-    void elixirtimerChanged(int);
-    void elixirtimerChanged(QString);
-    void elixirtimerChanged(QTime);
+    void elixirtimerChanged(const int);
+    void elixirtimerChanged(const QString);
     void scoreChanged(int);
     void signal_for_start_immortal_mode();
     void signal_for_finished_immortal_mode();

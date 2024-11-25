@@ -8,7 +8,7 @@ const int w_rect = 50;
 const int h_rect = 50;
 const int TOP = 10;
 
-Item::Item(int x_, int y_): x(x_), y(y_){
+Item::Item(size_t x_, size_t y_): x(x_), y(y_){
 
 }
 

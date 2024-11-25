@@ -1,7 +1,4 @@
 #include "scoremodel.h"
-#include <fstream>
-#include <QFile>
-#include <iterator>
 
 ScoreModel::ScoreModel() { }
 

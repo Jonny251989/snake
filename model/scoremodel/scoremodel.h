@@ -4,11 +4,9 @@
 #include <string>
 #include <vector>
 #include <QFile>
-#include <QByteArray>
-#include <QTextStream>
-#include <QDebug>
 #include "item.h"
 #include <fstream>
+#include <iterator>
 
 static const std::string m_filename = "./model/scoremodel/score.txt";
 

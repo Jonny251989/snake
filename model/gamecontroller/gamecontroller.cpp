@@ -1,6 +1,6 @@
 #include "gamecontroller.h"
 
-SnakeGameController::SnakeGameController(QObject *parent,  std::string type, int speedOfSnake_): QObject(parent), typeOfMaze(type), speed(speedOfSnake_){
+SnakeGameController::SnakeGameController(QObject *parent,  std::string type, size_t speedOfSnake_): QObject(parent), typeOfMaze(type), speed(speedOfSnake_){
     speed = speedOfSnake_;
     next_direction_snake = Direction::RIGHT;
     score = 0;
@@ -32,7 +32,7 @@ bool SnakeGameController::isDeadAfterMove(){
     return false;
 }
 
-void SnakeGameController::collisionWithFood(const Item head){
+void SnakeGameController::collisionWithFood(const Item& head){
     std::list<Food*>::iterator eated_food_it = std::find_if(food.begin(), food.end(), [=](Food* food) {
         return *food == head;
     });
@@ -53,7 +53,7 @@ void SnakeGameController::collisionWithFood(const Item head){
     }
 }
 
-void SnakeGameController::collisionWithElixir(const Item head){
+void SnakeGameController::collisionWithElixir(const Item& head){
     std::list<Elixir*>::iterator eated_elixir_it = std::find_if(elixir.begin(), elixir.end(), [=](Elixir* elixir) {
         return *elixir == head;
     });
@@ -95,14 +95,14 @@ bool SnakeGameController::collisionWithItselfOrMaze(){
     std::list<Item> snakeItems = snake->getSnake();
     Item head = snakeItems.front();
 
-    auto segmentsOfCollision = std::find_if(std::next(snakeItems.begin(), 1), snakeItems.end(), [=](Item item){
+    auto segmentsOfCollision = std::find_if(std::next(snakeItems.begin(), 1), snakeItems.end(), [=](const Item& item){
         return (head.x == item.x && head.y == item.y);
     });
     if(segmentsOfCollision != snakeItems.end())
         return true;
 
     std::list<Item> cordsOfmoze = maze->getMaze(); // лист с координатами лабиринта
-    auto segmentsOfCollisionWithMaze = std::find_if(cordsOfmoze.begin(), cordsOfmoze.end(), [=](Item item){
+    auto segmentsOfCollisionWithMaze = std::find_if(cordsOfmoze.begin(), cordsOfmoze.end(), [=](const Item& item){
         return (head.x == item.x && head.y == item.y);
     });
     if(segmentsOfCollisionWithMaze != cordsOfmoze.end())
@@ -111,7 +111,7 @@ bool SnakeGameController::collisionWithItselfOrMaze(){
     return false;
 }
 
-bool SnakeGameController:: checkingCordsForMatchWithSnakeAndMoze(int x,int y, EatType typeOfEat){
+bool SnakeGameController:: checkingCordsForMatchWithSnakeAndMoze(size_t x,size_t y, const EatType& typeOfEat){
     for (auto snakeItem : snake->getSnake()) {
         if (snakeItem.x == x && snakeItem.y == y)
             return true;
@@ -136,7 +136,7 @@ bool SnakeGameController:: checkingCordsForMatchWithSnakeAndMoze(int x,int y, Ea
     return false;
 }
 
-void SnakeGameController::generate_eats(EatType typeOfEat){
+void SnakeGameController::generate_eats(const EatType& typeOfEat){
 
    while(true){
        int x = std::experimental::randint(0,9);
@@ -171,7 +171,7 @@ void SnakeGameController:: generate_elixir() {
     this->generate_eats(EatType::ELIXIR);
 }
 
-void SnakeGameController::AppearanceOfSnakeDependingOnTypeOfMaze(std::string type)
+void SnakeGameController::AppearanceOfSnakeDependingOnTypeOfMaze(const std::string& type)
 {
     if (type == "Без лабиринта")
         snake->setStartPosition(0,1);
@@ -191,7 +191,7 @@ void SnakeGameController::blink_count_Up(){
     this->blink_count++;
 }
 
-void SnakeGameController::setterOfSpeed(int speed_){
+void SnakeGameController::setterOfSpeed(size_t speed_){
     this->speed = speed_;
 }
 
