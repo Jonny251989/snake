@@ -17,7 +17,7 @@ View::View(SnakeGameController* game, QWidget *parent): QGraphicsView(parent), m
     this->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);   // Отключим скроллбар по вертикали
     this->setAlignment(Qt::AlignCenter);                        // Делаем привязку содержимого к центру
     this->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);    // Растягиваем содержимое по виджету
-        
+
     this->reload_all_objects();
     this->preparation_for_flashing();
 

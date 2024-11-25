@@ -193,7 +193,6 @@ void SnakeGameController::blink_count_Up(){
 
 void SnakeGameController::setterOfSpeed(int speed_){
     this->speed = speed_;
-
 }
 
 std::size_t SnakeGameController::get_blink_count(){
