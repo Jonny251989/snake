@@ -7,7 +7,7 @@ Mazes::Mazes(QObject *parent, std::string type_): QObject(parent), type(type_){
 
 void Mazes::readFileWithMazes(){
     std::string type_ = gettypeafterupdate(type);
-    std::string filepath = "/typeofmozes/" + type_ + ".txt";
+    std::string filepath = "/home/ivan/vs_code/snake/model/maze/typeofmozes/" + type;
     std::cout <<"filepath: "<<filepath<<"\n";
     std::ifstream in(filepath);
     if (in.is_open()){
@@ -25,7 +25,10 @@ void Mazes::readFileWithMazes(){
             break;
        }
        in.close();
-    }
+        std::cout << "Файл открыт успешно!" << std::endl;
+    } else 
+    std::cerr << "Не удалось открыть файл. Ошибка: " << strerror(errno) << std::endl;
+    
 }
 
 std::string Mazes::gettypeafterupdate(std::string type){

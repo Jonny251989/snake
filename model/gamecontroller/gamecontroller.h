@@ -55,7 +55,7 @@ public:
     void setterOfSpeed(size_t speed_);
     void generate_eats(const EatType& typeOfEat);
     void activated_immortality_mode();
-    bool checkingCordsForMatchWithSnakeAndMoze(size_t x, size_t y, const EatType& typeOfEat);
+    bool checkingCordsForMatchWithSnakeAndMoze(int x, int y, const EatType& typeOfEat);
     bool collisionWithItselfOrMaze();
     void collisionWithEats();
     void collisionWithFood(const Item& head);

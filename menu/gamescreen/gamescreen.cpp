@@ -47,7 +47,6 @@ void GameScreen::startGame(std::string type, int speedOfSnake_) {
     connect(m_game, SIGNAL(gameOver()), this, SLOT(gameStop()));
 
     connect(timer_run_game, &QTimer::timeout, m_game,  &SnakeGameController::step );
-    //connect(timerKey, &QTimer::timeout, m_game,  &SnakeGameController::keyPress);
     connect(timerCreateElixir,  &QTimer::timeout, m_game, &SnakeGameController:: generate_elixir);
     //connect(timer_disappears, &QTimer::timeout, m_game, &SnakeGameController::removeElixirAfterEndOfTimer);
 

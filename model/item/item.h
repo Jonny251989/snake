@@ -9,10 +9,6 @@ extern const int w_rect;
 extern const int h_rect;
 extern const int TOP;
 
-enum MazeType {
-    WithoutLabirint, WithBorder, Labirint_1, Labirint_2, Labirint_3, Labirint_4, Labirint_5, Labirint_6
-};
-
 enum EatType {
     FOOD,ELIXIR
 };
@@ -25,8 +21,8 @@ enum class Direction {
 };
 
 struct Item{
-    size_t x, y;
-    Item(size_t x_ = 0, size_t y_ = 0);
+    int x, y;
+    Item(int x_ = 0, int y_ = 0);
     bool operator==(const Item& first);
     ~Item();
 };

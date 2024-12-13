@@ -98,10 +98,12 @@ bool SnakeGameController::collisionWithItselfOrMaze(){
     auto segmentsOfCollision = std::find_if(std::next(snakeItems.begin(), 1), snakeItems.end(), [=](const Item& item){
         return (head.x == item.x && head.y == item.y);
     });
+    
     if(segmentsOfCollision != snakeItems.end())
         return true;
 
     std::list<Item> cordsOfmoze = maze->getMaze(); // лист с координатами лабиринта
+
     auto segmentsOfCollisionWithMaze = std::find_if(cordsOfmoze.begin(), cordsOfmoze.end(), [=](const Item& item){
         return (head.x == item.x && head.y == item.y);
     });
@@ -111,7 +113,7 @@ bool SnakeGameController::collisionWithItselfOrMaze(){
     return false;
 }
 
-bool SnakeGameController:: checkingCordsForMatchWithSnakeAndMoze(size_t x,size_t y, const EatType& typeOfEat){
+bool SnakeGameController:: checkingCordsForMatchWithSnakeAndMoze(int x, int y, const EatType& typeOfEat){
     for (auto snakeItem : snake->getSnake()) {
         if (snakeItem.x == x && snakeItem.y == y)
             return true;
